@@ -1,39 +1,30 @@
 <!DOCTYPE html>		
-    <h1>
+<h1>
 By Aiden Baker. 	
 Licensed to Aiden Baker using GNU GPLv3	
 https://choosealicense.com/licenses/gpl-3.0/
-</h1>	
-<head>
+</h1>
 <script>	
-let noun = ['giraffe', 'monkey', 'boy', 'girl', 'elephant'];
-let verb = ['jumps', 'runs', 'sleeps', 'sits', 'dances'];
-let adjective = ['big', 'small', 'loud', 'silly', 'young', 'old', 'sleepy'];
-let adverb = ['quickly', 'excitedly', 'angrily', 'happily', 'sadly'];
-let article = ['a', 'the'];
-let preposition = ['under', 'over', 'around', 'near', 'beside'];
-//eventually change this to use the stupidly large list of words on github or something...
+    let noun = ['giraffe', 'monkey', 'boy', 'girl', 'elephant'];
+    let verb = ['jumps', 'runs', 'sleeps', 'sits', 'dances'];
+    let adjective = ['big', 'small', 'loud', 'silly', 'young', 'old', 'sleepy'];
+    let adverb = ['quickly', 'excitedly', 'angrily', 'happily', 'sadly'];
+    let article = ['a', 'the'];
+    let preposition = ['under', 'over', 'around', 'near', 'beside'];
+        //eventually change this to use the stupidly large list of words on github or something...
 
-let RArray = function(list) {
-    return list[Math.floor(Math.random()*list.length)]; //makes a function named RArray, which chooses a random value from the array provided
-};
-document.body.onkeyup = function(e){
-    if(e.keyCode == 32){
-        document.getElementById("result").innerHTML = (RArray(article)+" "+RArray(adjective)+" "+RArray(noun)+" "+RArray(adverb)+" "+RArray(verb)+" "+RArray(preposition)+" "+RArray(article)+" "+RArray(noun));
-    }
-}
-
-
-</script>	
-</head>	
+    let RArray = function(list) {
+        return list[Math.floor(Math.random()*list.length)]; //makes a function named RArray, which chooses a random value from the array provided
+    };
+    document.body.onkeyup = function(e){
+        if(e.keyCode == 32){
+            document.getElementById("result").innerHTML = (RArray(article)+" "+RArray(adjective)+" "+RArray(noun)+" "+RArray(adverb)+" "+RArray(verb)+" "+RArray(preposition)+" "+RArray(article)+" "+RArray(noun));
+        };
+    };
+</script>
 <h2>
     your sentence:
 </h2>
 <h3 id="result">
-
 </h3>
-<head>
-
-</head>
-
 </html>
