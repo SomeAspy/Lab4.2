@@ -19,13 +19,19 @@ let RArray = function(list) {
 };
 document.body.onkeyup = function(e){
     if(e.keyCode == 32){
-        alert(RArray(article)+" "+RArray(adjective)+" "+RArray(noun)+" "+RArray(adverb)+" "+RArray(verb)+" "+RArray(preposition)+" "+RArray(article)+" "+RArray(noun));
+        document.getElementById("result").innerHTML = (RArray(article)+" "+RArray(adjective)+" "+RArray(noun)+" "+RArray(adverb)+" "+RArray(verb)+" "+RArray(preposition)+" "+RArray(article)+" "+RArray(noun));
     }
 }
 
 
 </script>	
 </head>	
+<h2>
+    your sentence:
+</h2>
+<h3 id="result">
+
+</h3>
 <head>
 
 </head>
