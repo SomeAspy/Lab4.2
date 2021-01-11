@@ -15,6 +15,11 @@ let preposition = ['under', 'over', 'around', 'near', 'beside'];
 let RArray = function(list) {
     return list[Math.floor(Math.random()*list.length)]; //makes a function named RArray, which chooses a random value from the array provided
 };
+document.body.onkeyup = function(e){
+    if(e.keyCode == 32){
+        alert(RArray(article)+RArray(adjective)+RArray(noun)+RArray(adverb)+RArray(verb)+RArray(preposition)+RArray(article)+RArray(noun));
+    }
+}
 
 
 </script>	
