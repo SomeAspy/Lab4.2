@@ -16,11 +16,6 @@ https://choosealicense.com/licenses/gpl-3.0/
     let RArray = function(list) {
         return list[Math.floor(Math.random()*list.length)]; //makes a function named RArray, which chooses a random value from the array provided
     };
-    document.body.onkeyup = function(e){
-        if(e.keyCode == 32){
-            document.getElementById("result").innerHTML = (RArray(article)+" "+RArray(adjective)+" "+RArray(noun)+RArray(plural)+" "+RArray(adverb)+" "+RArray(verb)+" "+RArray(preposition)+" "+RArray(article)+" "+RArray(noun)+RArray(plural));
-        };
-    };
 </script>
 <b>list of nouns, verbs and adjectives I used: https://gist.github.com/ijmacdowell/8325491</b>
 <h2>
@@ -31,6 +26,11 @@ https://choosealicense.com/licenses/gpl-3.0/
 <button type='button' onclick='adverb.push(prompt("Input the adverb you would like to add to the list"))'>Add a adverb.</button>
 <button type='button' onclick='preposition.push(prompt("Input the preposition you would like to add to the list"))'>Add a preposition.</button>
 <button type='button' onclick='article.push(prompt("Input the article you would like to add to the list"))'>Add a article.</button>
+<button type='button' onclick='document.body.onkeyup = function(e){
+    if(e.keyCode == 32){
+        document.getElementById("result").innerHTML = (RArray(article)+" "+RArray(adjective)+" "+RArray(noun)+RArray(plural)+" "+RArray(adverb)+" "+RArray(verb)+" "+RArray(preposition)+" "+RArray(article)+" "+RArray(noun)+RArray(plural));
+    };
+};'>Generate a sentence!.</button>
 </h2>
 <h3 id="result">
 </h3>
